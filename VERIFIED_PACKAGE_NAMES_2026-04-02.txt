@@ -1,0 +1,48 @@
+Verified package IDs added to the project on 2026-04-02
+
+app006 Waze -> com.waze
+app007 Organic Maps -> app.organicmaps
+app023 Yandex Browser -> com.yandex.browser
+app024 Yandex Browser Lite -> com.yandex.browser.lite
+app033 Yandex Music -> ru.yandex.music
+app035 Spotify -> com.spotify.music
+app036 Apple Music -> com.apple.android.music
+app038 Kinopoisk -> ru.kinopoisk
+app040 RUTUBE -> rtb.mobile.android
+app042 Okko -> ru.more.play
+app043 IVI -> ru.ivi.client
+app049 FMPLAY -> ru.fmplay
+app054 VLC -> org.videolan.vlc
+app055 VK Video -> com.vk.vkvideo
+app057 YouTube Kids -> com.google.android.apps.youtube.kids
+app063 Zvuk -> com.zvooq.openplay
+app066 Wink -> ru.rt.video.app.mobile ; ru.rt.video.app.tv
+app067 Deezer -> deezer.android.app
+app068 KION -> ru.mts.mtstv
+app072 Yandex Radio -> ru.yandex.mobile.fmradio
+app077 Twitch -> tv.twitch.android.app
+app082 Amazon Music -> com.amazon.mp3
+app083 SoundCloud -> com.soundcloud.android
+app088 Telegram -> org.telegram.messenger
+app090 Yandex Mail -> ru.yandex.mail
+app093 Home Assistant -> io.homeassistant.companion.android
+
+Note: many LiApp-adapted or niche apps may use repackaged APKs, so the project still keeps title-based matching as fallback.
+
+app109 Navitel Navigator -> ru.navitel
+app110 Car Scanner ELM OBD2 -> com.ovz.carscanner
+app111 Torque Pro -> org.prowl.torque
+app112 Torque Lite -> org.prowl.torquefree
+app113 AIMP -> com.aimp.player
+app114 MX Player -> com.mxtech.videoplayer.ad
+app115 CarWebGuru -> com.softartstudio.carwebguru
+app116 Car Launcher -> com.autolauncher.motorcar.free ; com.autolauncher.motorcar
+app117 AGAMA Car Launcher -> altergames.carlauncher
+app118 Headunit Reloaded -> gb.xxy.hr
+app119 GPS AntiRadar -> air.StrelkaSDFREE ; air.StrelkaSD
+app123 CarCar Installer -> com.carcarlauncher.installer
+
+Title-only additions from automotive forums and head-unit discussions:
+app120 FCC Car Launcher -> title aliases only (package not confirmed from primary public app source)
+app121 Crony Auto -> title aliases only (package not confirmed from primary public app source)
+app122 NavRadio+ -> title aliases only (package not confirmed from primary public app source)

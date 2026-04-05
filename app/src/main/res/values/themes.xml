@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DisplayLauncher" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dl_primary</item>
+        <item name="colorOnPrimary">@color/dl_onPrimary</item>
+        <item name="colorSecondary">@color/dl_secondary</item>
+        <item name="colorOnSecondary">@color/dl_onSecondary</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/app_background</item>
+    </style>
+</resources>

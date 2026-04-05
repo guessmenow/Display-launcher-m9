@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient android:angle="0" android:startColor="@color/launch_card_ceiling_start" android:endColor="@color/launch_card_ceiling_end" />
+    <corners android:radius="28dp" />
+    <stroke android:width="1dp" android:color="@color/launch_card_stroke" />
+</shape>

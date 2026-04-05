@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_background">#060B15</color>
+    <color name="app_background_top">#101B34</color>
+    <color name="app_background_mid">#0A1024</color>
+    <color name="app_background_bottom">#0C1430</color>
+    <color name="card_surface">#101A2F</color>
+    <color name="card_stroke">#22314C</color>
+    <color name="text_primary">#F4F7FF</color>
+    <color name="text_secondary">#97A3C1</color>
+    <color name="header_title">#FFFFFF</color>
+    <color name="header_subtitle">#D8E7FF</color>
+
+    <color name="dl_primary">#78AFFF</color>
+    <color name="dl_onPrimary">#072550</color>
+    <color name="dl_secondary">#BA9BFF</color>
+    <color name="dl_onSecondary">#2A134F</color>
+    <color name="circle_blue">#5EA6FF</color>
+    <color name="circle_purple">#A170FF</color>
+    <color name="circle_amber">#FFBF47</color>
+    <color name="circle_teal">#32D7C9</color>
+    <color name="launcher_bg">#0F1730</color>
+    <color name="launcher_bg_end">#243C7A</color>
+    <color name="launcher_accent">#4FE0D0</color>
+    <color name="action_button_start">#2E5BFF</color>
+    <color name="action_button_end">#20D0C4</color>
+    <color name="action_button_inner">#132038</color>
+    <color name="action_button_stroke">#32507C</color>
+    <color name="text_primaryVariant">@color/text_secondary</color>
+
+    <color name="launch_card_main_start">#14233F</color>
+    <color name="launch_card_main_end">#101C34</color>
+    <color name="launch_card_passenger_start">#171B3D</color>
+    <color name="launch_card_passenger_end">#12172F</color>
+    <color name="launch_card_full_start">#221B11</color>
+    <color name="launch_card_full_end">#161A28</color>
+    <color name="launch_card_ceiling_start">#10232A</color>
+    <color name="launch_card_ceiling_end">#101A2F</color>
+    <color name="launch_card_stroke">#2B3C5A</color>
+
+</resources>
