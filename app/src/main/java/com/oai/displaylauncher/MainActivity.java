@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView selectedAppTitle;
     private TextView selectedAppSubtitle;
     private TextView selectedAppCategory;
+    private View selectedAppChips;
+    private TextView chipSelected;
+    private TextView chipShortcuts;
     private MaterialCardView appSelectorCard;
     private View createShortcutsButton;
     private View hideShortcutsButton;
@@ -85,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
         selectedAppTitle = findViewById(R.id.selectedAppTitle);
         selectedAppSubtitle = findViewById(R.id.selectedAppSubtitle);
         selectedAppCategory = findViewById(R.id.selectedAppCategory);
+        selectedAppChips = findViewById(R.id.selectedAppChips);
+        chipSelected = findViewById(R.id.chipSelected);
+        chipShortcuts = findViewById(R.id.chipShortcuts);
         appSelectorCard = findViewById(R.id.appSelectorCard);
         createShortcutsButton = findViewById(R.id.createShortcutsButton);
         hideShortcutsButton = findViewById(R.id.hideShortcutsButton);
@@ -148,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
         selectedAppTitle.setText(loading ? "Загрузка приложений…" : "Выберите приложение");
         selectedAppSubtitle.setText(loading ? "Собираем список пользовательских приложений" : "Нажмите, чтобы выбрать");
         selectedAppCategory.setText(loading ? "Категория: загрузка…" : "Категория: —");
+        selectedAppChips.setVisibility(loading ? View.GONE : View.INVISIBLE);
         selectedAppIcon.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_launcher_foreground));
     }
 
@@ -284,6 +291,7 @@ public class MainActivity extends AppCompatActivity {
             selectedAppSubtitle.setText("Нажмите, чтобы открыть список");
             selectedAppCategory.setText("Категория: —");
             appSelectorCard.setStrokeColor(getColor(R.color.card_stroke));
+            selectedAppChips.setVisibility(View.INVISIBLE);
             return;
         }
 
@@ -291,6 +299,11 @@ public class MainActivity extends AppCompatActivity {
         selectedAppTitle.setText(selectedTarget.title);
         selectedAppSubtitle.setText(selectedTarget.packageName);
         selectedAppCategory.setText("Категория: " + sectionLabel(classifyApp(selectedTarget)));
+        selectedAppChips.setVisibility(View.VISIBLE);
+        chipSelected.setText("Выбрано");
+        chipShortcuts.setText(SupportedAliasCatalog.findForTarget(selectedTarget) != null
+                ? "Ярлыки: поддерживаются"
+                : "Ярлыки: нет");
         appSelectorCard.setStrokeColor(getColor(R.color.dl_primary));
     }
 
