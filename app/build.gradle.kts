@@ -2,9 +2,24 @@ plugins {
     id("com.android.application")
 }
 
+import java.util.Properties
+
 android {
     namespace = "com.oai.displaylauncher"
     compileSdk = 35
+
+    val keystorePropsFile = rootProject.file("keystore.properties")
+    val keystoreProps = Properties()
+    if (keystorePropsFile.exists()) {
+        keystorePropsFile.inputStream().use { keystoreProps.load(it) }
+    }
+
+    fun keystoreValue(key: String): String? {
+        val fromFile = keystoreProps.getProperty(key)
+        if (!fromFile.isNullOrBlank()) return fromFile
+        val fromEnv = System.getenv(key)
+        return if (fromEnv.isNullOrBlank()) null else fromEnv
+    }
 
     defaultConfig {
         applicationId = "com.oai.displaylauncher"
@@ -18,9 +33,27 @@ android {
         }
     }
 
+    val hasSigning = !keystoreValue("M9_KEYSTORE_PATH").isNullOrBlank() &&
+        !keystoreValue("M9_KEYSTORE_PASS").isNullOrBlank() &&
+        !keystoreValue("M9_KEY_ALIAS").isNullOrBlank()
+
+    if (hasSigning) {
+        signingConfigs {
+            create("release") {
+                storeFile = file(keystoreValue("M9_KEYSTORE_PATH")!!)
+                storePassword = keystoreValue("M9_KEYSTORE_PASS")
+                keyAlias = keystoreValue("M9_KEY_ALIAS")
+                keyPassword = keystoreValue("M9_KEY_ALIAS_PASS") ?: keystoreValue("M9_KEYSTORE_PASS")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            if (hasSigning) {
+                signingConfig = signingConfigs.getByName("release")
+            }
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
