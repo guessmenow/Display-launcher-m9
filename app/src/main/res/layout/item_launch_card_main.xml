@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="2"
-            android:text="Открыть на главном экране"
+            android:text="Открыть на основном экране"
             android:textColor="@color/text_primary"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Display 1001 · Главный"
+            android:text="Display 1001 · Основной"
             android:textColor="@color/text_primaryVariant"
             android:textSize="12sp" />
     </LinearLayout>

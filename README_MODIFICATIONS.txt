@@ -11,3 +11,11 @@ Update 2026-04-02 (popular head-unit apps added)
 - Verified package names where public primary sources exposed them.
 - Added title-only fallback entries for FCC Car Launcher, Crony Auto, and NavRadio+ when package IDs could not be confirmed from primary public app sources.
 - Kept the working launcher-component model unchanged.
+
+Update 2026-04-06
+- Быстрые кнопки запуска перенесены в строки списка приложений.
+- Добавлен режим закрепления через alias-activity: долгий тап создаёт один ярлык под выбранный экран.
+- Повторный долгий тап снимает закрепление.
+- Добавлена вкладка «Отладка» с диагностикой и инженерными инструментами.
+- Добавлен блок APK загрузки/установки из публичной папки Яндекс.Диска.
+- Долгое нажатие на кнопку обновления в шапке Отладки перезагружает список APK.

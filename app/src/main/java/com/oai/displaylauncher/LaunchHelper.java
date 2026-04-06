@@ -6,9 +6,12 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Build;
 
 import androidx.annotation.Nullable;
+
+import java.util.List;
 
 public final class LaunchHelper {
     public static final String EXTRA_PACKAGE_NAME = "extra_package_name";
@@ -56,10 +59,50 @@ public final class LaunchHelper {
         }
     }
 
-    public static boolean startTwoGisCarApp(Activity activity) {
+    public static boolean startCarApp(Activity activity) {
+        boolean started = false;
+        started |= startCarAppForPackage(activity,
+                "ru.dublgis.dgismobile",
+                "ru.dublgis.car.CarService");
+        started |= startCarAppForPackage(activity,
+                "ru.yandex.yandexnavi",
+                null);
+        return started;
+    }
+
+    public static boolean hasCarApp(Context context) {
+        return hasCarAppForPackage(context, "ru.dublgis.dgismobile", "ru.dublgis.car.CarService")
+                || hasCarAppForPackage(context, "ru.yandex.yandexnavi", null);
+    }
+
+    private static boolean hasCarAppForPackage(Context context, String packageName, @Nullable String explicitService) {
+        if (!isPackageInstalled(context, packageName)) {
+            return false;
+        }
+        if (explicitService != null && isServiceDeclared(context, packageName, explicitService)) {
+            return true;
+        }
+        return findCarAppService(context, packageName) != null;
+    }
+
+    private static boolean startCarAppForPackage(Activity activity,
+                                                 String packageName,
+                                                 @Nullable String explicitService) {
+        if (!isPackageInstalled(activity, packageName)) {
+            return false;
+        }
+        ComponentName component = null;
+        if (explicitService != null && isServiceDeclared(activity, packageName, explicitService)) {
+            component = new ComponentName(packageName, explicitService);
+        } else {
+            component = findCarAppService(activity, packageName);
+        }
+        if (component == null) {
+            return false;
+        }
         try {
             Intent intent = new Intent();
-            intent.setComponent(new ComponentName("ru.dublgis.dgismobile", "ru.dublgis.car.CarService"));
+            intent.setComponent(component);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 activity.startForegroundService(intent);
             } else {
@@ -69,6 +112,22 @@ public final class LaunchHelper {
         } catch (Exception ignored) {
             return false;
         }
+    }
+
+    @Nullable
+    private static ComponentName findCarAppService(Context context, String packageName) {
+        Intent intent = new Intent("androidx.car.app.CarAppService");
+        intent.addCategory("androidx.car.app.category.NAVIGATION");
+        intent.setPackage(packageName);
+        List<ResolveInfo> services = context.getPackageManager().queryIntentServices(intent, 0);
+        if (services == null || services.isEmpty()) {
+            return null;
+        }
+        ResolveInfo service = services.get(0);
+        if (service.serviceInfo == null) {
+            return null;
+        }
+        return new ComponentName(service.serviceInfo.packageName, service.serviceInfo.name);
     }
 
     public static void launch(Activity activity,

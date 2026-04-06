@@ -2,64 +2,37 @@ package com.oai.displaylauncher;
 
 import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.hardware.display.DisplayManager;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.card.MaterialCardView;
-
-import java.text.Collator;
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
     private final List<AppTarget> appTargets = new ArrayList<>();
     private final List<DisplayTarget> displayTargets = new ArrayList<>();
-    private final Map<Integer, MaterialCardView> displayCards = new HashMap<>();
-
     @Nullable
     private AppTarget selectedTarget;
 
-    private ImageView selectedAppIcon;
-    private TextView selectedAppTitle;
-    private TextView selectedAppSubtitle;
-    private TextView selectedAppCategory;
-    private View selectedAppChips;
-    private TextView chipSelected;
-    private TextView chipShortcuts;
-    private MaterialCardView appSelectorCard;
-    private View createShortcutsButton;
+    // selected app summary removed
     private View hideShortcutsButton;
     private View hideSelectedShortcutsButton;
     private View carAppCard;
     private TextView carAppStatusText;
-    private TextView diagnosticsText;
-    private View quickLaunchCard;
-    private TextView quickLaunchTitle;
-    private TextView quickLaunchSubtitle;
-    private View quickPassengerButton;
-    private View quickCeilingButton;
-    private View quickResetButton;
+    private View debugButton;
+    private View communityLink;
+    // app version text handled locally
+    // quick launch removed
 
     private RecyclerView appsRecycler;
     private AppListAdapter appListAdapter;
@@ -77,151 +50,98 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void prepareDisplayTargets() {
-        displayTargets.add(new DisplayTarget("Главный", 1001));
+        displayTargets.add(new DisplayTarget("Основной", 1001));
         displayTargets.add(new DisplayTarget("Пассажирский", 1002));
         displayTargets.add(new DisplayTarget("Весь экран", 1003));
         displayTargets.add(new DisplayTarget("Потолочный", 3));
     }
 
     private void bindViews() {
-        selectedAppIcon = findViewById(R.id.selectedAppIcon);
-        selectedAppTitle = findViewById(R.id.selectedAppTitle);
-        selectedAppSubtitle = findViewById(R.id.selectedAppSubtitle);
-        selectedAppCategory = findViewById(R.id.selectedAppCategory);
-        selectedAppChips = findViewById(R.id.selectedAppChips);
-        chipSelected = findViewById(R.id.chipSelected);
-        chipShortcuts = findViewById(R.id.chipShortcuts);
-        appSelectorCard = findViewById(R.id.appSelectorCard);
-        createShortcutsButton = findViewById(R.id.createShortcutsButton);
+        // selected app summary removed
         hideShortcutsButton = findViewById(R.id.hideShortcutsButton);
         hideSelectedShortcutsButton = findViewById(R.id.hideSelectedShortcutsButton);
         carAppCard = findViewById(R.id.carAppCard);
         carAppStatusText = findViewById(R.id.carAppStatusText);
-        diagnosticsText = findViewById(R.id.diagnosticsText);
-        quickLaunchCard = findViewById(R.id.quickLaunchCard);
-        quickLaunchTitle = findViewById(R.id.quickLaunchTitle);
-        quickLaunchSubtitle = findViewById(R.id.quickLaunchSubtitle);
-        quickPassengerButton = findViewById(R.id.quickPassengerButton);
-        quickCeilingButton = findViewById(R.id.quickCeilingButton);
-        quickResetButton = findViewById(R.id.quickResetButton);
+        debugButton = findViewById(R.id.debugButton);
+        communityLink = findViewById(R.id.appCommunityLink);
+        TextView appVersionText = findViewById(R.id.appVersionText);
+        // quick launch removed from layout
         appsRecycler = findViewById(R.id.appsRecycler);
 
-        appListAdapter = new AppListAdapter(this, target -> {
-            selectedTarget = target;
-            updateSelectedAppCard();
-            updateQuickLaunchState();
-            rebuildAppList();
+        appListAdapter = new AppListAdapter(this, new AppListAdapter.OnAppSelectedListener() {
+            @Override
+            public void onAppSelected(AppTarget target) {
+                selectedTarget = target;
+                // selected app summary removed
+                rebuildAppList();
+            }
+
+            @Override
+            public void onLaunchRequested(AppTarget target, int displayId, String label) {
+                selectedTarget = target;
+                // selected app summary removed
+                launchTargetOnDisplay(target, displayId, label);
+                rebuildAppList();
+            }
+
+            @Override
+            public void onBindRequested(AppTarget target, int displayId, String label) {
+                handleDistinctBinding(target, displayId, label);
+                return;
+
+            }
         });
         appsRecycler.setLayoutManager(new LinearLayoutManager(this));
         appsRecycler.setAdapter(appListAdapter);
+        appListAdapter.setSwapLayout(shouldSwapAppRow());
+        if (appVersionText != null) {
+            appVersionText.setText(getString(R.string.version_format, readVersionName()));
+        }
     }
 
     private void setupClickListeners() {
-        appSelectorCard.setOnClickListener(v -> showAppPicker());
-        createShortcutsButton.setOnClickListener(this::createPinnedShortcuts);
+        // app picker removed; selection happens in the list
+        findViewById(R.id.settingsButton)
+                .setOnClickListener(v -> startActivity(new Intent(this, SettingsActivity.class)));
         hideShortcutsButton.setOnClickListener(this::hideAllAliasShortcuts);
         hideSelectedShortcutsButton.setOnClickListener(this::hideSelectedAliasShortcuts);
-        carAppCard.setOnClickListener(v -> triggerTwoGisCarApp());
-        findViewById(R.id.carAppTriggerButton).setOnClickListener(v -> triggerTwoGisCarApp());
-        findViewById(R.id.diagnosticsRefreshButton).setOnClickListener(v -> updateDiagnosticsPanel());
-        quickPassengerButton.setOnClickListener(v -> runQuickLaunch(1002, "пассажирском экране"));
-        quickCeilingButton.setOnClickListener(v -> runQuickLaunch(3, "потолочном экране"));
-        quickResetButton.setOnClickListener(v -> runQuickReset());
-
-        bindLaunchCard(R.id.cardMain, 1001, "главном экране");
-        bindLaunchCard(R.id.cardPassenger, 1002, "пассажирском экране");
-        bindLaunchCard(R.id.cardFull, 1003, "весь экран");
-        bindLaunchCard(R.id.cardCeiling, 3, "потолочном экране");
+        carAppCard.setOnClickListener(v -> triggerCarApp());
+        findViewById(R.id.carAppTriggerButton).setOnClickListener(v -> triggerCarApp());
+        debugButton.setOnClickListener(v -> startActivity(new Intent(this, DebugActivity.class)));
+        communityLink.setOnClickListener(v -> openCommunityLink());
+        // diagnostics moved to SettingsActivity
+        // quick launch + launch cards removed from UI
     }
 
-    private void bindLaunchCard(int viewId, int displayId, String label) {
-        MaterialCardView card = findViewById(viewId);
-        displayCards.put(displayId, card);
-        card.setOnClickListener(v -> launchOnDisplay(displayId, label));
-        card.setOnLongClickListener(v -> {
-            handleDisplayBinding(displayId, label);
-            return true;
-        });
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateLoadingState(true);
+        loadInstalledTargetsAsync();
+        appListAdapter.setSwapLayout(shouldSwapAppRow());
     }
 
     private void updateLoadingState(boolean loading) {
-        appSelectorCard.setEnabled(!loading);
-        createShortcutsButton.setEnabled(!loading);
         hideShortcutsButton.setEnabled(!loading);
         hideSelectedShortcutsButton.setEnabled(!loading);
         carAppCard.setEnabled(!loading);
         appsRecycler.setVisibility(loading ? View.GONE : View.VISIBLE);
-        selectedAppTitle.setText(loading ? "Загрузка приложений…" : "Выберите приложение");
-        selectedAppSubtitle.setText(loading ? "Собираем список пользовательских приложений" : "Нажмите, чтобы выбрать");
-        selectedAppCategory.setText(loading ? "Категория: загрузка…" : "Категория: —");
-        selectedAppChips.setVisibility(loading ? View.GONE : View.INVISIBLE);
-        selectedAppIcon.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_launcher_foreground));
+        // selected app summary removed
     }
 
     private void loadInstalledTargetsAsync() {
         new Thread(() -> {
             try {
-                List<AppTarget> loaded = loadLaunchableUserApps();
+                List<AppTarget> loaded = AppScanner.loadLaunchableUserApps(this, AppScanner.loadManagedPackages(this));
                 runOnUiThread(() -> applyLoadedTargets(loaded));
             } catch (Throwable t) {
                 runOnUiThread(() -> {
                     updateLoadingState(false);
                     selectedTarget = null;
-                    selectedAppTitle.setText("Ошибка загрузки");
-                    selectedAppSubtitle.setText(safeMessage(t.getMessage()));
+                    // selected app summary removed
                 });
             }
         }).start();
-    }
-
-    private List<AppTarget> loadLaunchableUserApps() {
-        List<AppTarget> result = new ArrayList<>();
-        PackageManager pm = getPackageManager();
-
-        Intent queryIntent = new Intent(Intent.ACTION_MAIN);
-        queryIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-        List<ResolveInfo> activities = new ArrayList<>(pm.queryIntentActivities(queryIntent, 0));
-
-        Set<String> seenPackages = new HashSet<>();
-        Collator collator = Collator.getInstance(new Locale("ru"));
-        activities.sort(Comparator.comparing(info -> safeLabel(info, pm), collator));
-
-        for (ResolveInfo info : activities) {
-            if (info.activityInfo == null || info.activityInfo.applicationInfo == null) {
-                continue;
-            }
-
-            ApplicationInfo applicationInfo = info.activityInfo.applicationInfo;
-            if (isSystemApp(applicationInfo)) {
-                continue;
-            }
-
-            String packageName = info.activityInfo.packageName;
-            if (packageName == null || packageName.trim().isEmpty()) {
-                continue;
-            }
-            if (getPackageName().equals(packageName) || seenPackages.contains(packageName)) {
-                continue;
-            }
-            seenPackages.add(packageName);
-
-            String title = safeLabel(info, pm);
-            String activityName = normalizeActivityName(packageName, info.activityInfo.name);
-            if ("ru.yandex.yandexnavi".equals(packageName)) {
-                activityName = "ru.yandex.yandexnavi.core.NavigatorActivity";
-            } else if ("ru.dublgis.dgismobile".equals(packageName)) {
-                activityName = "ru.dublgis.dgismobile.GrymMobileActivity";
-            }
-
-            result.add(new AppTarget(
-                    title,
-                    packageName,
-                    packageName,
-                    activityName,
-                    R.drawable.ic_launcher_foreground
-            ));
-        }
-        return result;
     }
 
     private void applyLoadedTargets(List<AppTarget> loaded) {
@@ -231,115 +151,21 @@ public class MainActivity extends AppCompatActivity {
         if (appTargets.isEmpty()) {
             updateLoadingState(false);
             selectedTarget = null;
-            selectedAppTitle.setText("Приложения не найдены");
-            selectedAppSubtitle.setText("Нет сторонних приложений с ярлыком запуска");
+            // selected app summary removed
             appsRecycler.setVisibility(View.GONE);
             return;
         }
 
-        selectedTarget = findPreferredTarget();
+        selectedTarget = null;
         updateLoadingState(false);
-        appSelectorCard.setEnabled(true);
-        createShortcutsButton.setEnabled(true);
         hideShortcutsButton.setEnabled(true);
         hideSelectedShortcutsButton.setEnabled(true);
-        updateSelectedAppCard();
+        // selected app summary removed
         updateCarAppStatus();
-        refreshDisplayBindings();
-        updateDiagnosticsPanel();
-        updateQuickLaunchState();
         rebuildAppList();
     }
 
-    @Nullable
-    private AppTarget findPreferredTarget() {
-        for (AppTarget target : appTargets) {
-            if ("ru.yandex.yandexnavi".equals(target.packageName)) {
-                return target;
-            }
-        }
-        for (AppTarget target : appTargets) {
-            if ("ru.yandex.yandexmaps".equals(target.packageName)) {
-                return target;
-            }
-        }
-        return appTargets.isEmpty() ? null : appTargets.get(0);
-    }
-
-    private void showAppPicker() {
-        if (appTargets.isEmpty()) {
-            showToast("Список приложений ещё не готов");
-            return;
-        }
-
-        AppChoiceAdapter adapter = new AppChoiceAdapter(this, appTargets);
-        new AlertDialog.Builder(this)
-                .setTitle("Выберите приложение")
-                .setAdapter(adapter, (dialog, which) -> {
-                    selectedTarget = adapter.getItem(which);
-                    updateSelectedAppCard();
-                    dialog.dismiss();
-                })
-                .setNegativeButton("Отмена", null)
-                .show();
-    }
-
-    private void updateSelectedAppCard() {
-        if (selectedTarget == null) {
-            selectedAppIcon.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_launcher_foreground));
-            selectedAppTitle.setText("Выберите приложение");
-            selectedAppSubtitle.setText("Нажмите, чтобы открыть список");
-            selectedAppCategory.setText("Категория: —");
-            appSelectorCard.setStrokeColor(getColor(R.color.card_stroke));
-            selectedAppChips.setVisibility(View.INVISIBLE);
-            return;
-        }
-
-        selectedAppIcon.setImageDrawable(selectedTarget.loadIcon(this));
-        selectedAppTitle.setText(selectedTarget.title);
-        selectedAppSubtitle.setText(selectedTarget.packageName);
-        selectedAppCategory.setText("Категория: " + sectionLabel(classifyApp(selectedTarget)));
-        selectedAppChips.setVisibility(View.VISIBLE);
-        chipSelected.setText("Выбрано");
-        chipShortcuts.setText(SupportedAliasCatalog.findForTarget(selectedTarget) != null
-                ? "Ярлыки: поддерживаются"
-                : "Ярлыки: нет");
-        appSelectorCard.setStrokeColor(getColor(R.color.dl_primary));
-    }
-
-    private void updateQuickLaunchState() {
-        if (selectedTarget == null) {
-            quickLaunchTitle.setText("Быстрые действия");
-            quickLaunchSubtitle.setText("Выберите приложение в списке");
-            setQuickButtonsEnabled(false);
-            return;
-        }
-        quickLaunchTitle.setText("Быстрые действия: " + selectedTarget.title);
-        quickLaunchSubtitle.setText("Пассажир / Потолок / Сброс → Главный");
-        setQuickButtonsEnabled(true);
-    }
-
-    private void setQuickButtonsEnabled(boolean enabled) {
-        quickPassengerButton.setEnabled(enabled);
-        quickCeilingButton.setEnabled(enabled);
-        quickResetButton.setEnabled(enabled);
-    }
-
-    private void runQuickLaunch(int displayId, String label) {
-        if (selectedTarget == null) {
-            showToast("Сначала выберите приложение");
-            return;
-        }
-        launchTargetOnDisplay(selectedTarget, displayId, label);
-    }
-
-    private void runQuickReset() {
-        if (selectedTarget == null) {
-            showToast("Сначала выберите приложение");
-            return;
-        }
-        confirmResetToMain(selectedTarget);
-    }
+    // quick launch removed
 
     private void rebuildAppList() {
         if (appTargets.isEmpty()) {
@@ -381,26 +207,89 @@ public class MainActivity extends AppCompatActivity {
         for (AppTarget target : targets) {
             boolean selected = selectedTarget != null && target.packageName.equals(selectedTarget.packageName);
             boolean supported = SupportedAliasCatalog.findForTarget(target) != null;
-            rows.add(AppListRow.app(target, selected, supported));
+            rows.add(AppListRow.app(target, selected, supported, buildBindingSummary(target)));
         }
     }
 
-    private void launchOnDisplay(int displayId, String label) {
-        AppTarget target = selectedTarget;
-        if (target == null) {
-            DisplayBinding binding = loadDisplayBinding(displayId);
-            if (binding != null) {
-                target = new AppTarget(binding.title, binding.packageName, binding.packageName,
-                        binding.activityName, R.drawable.ic_launcher_foreground);
+    private void handleDistinctBinding(AppTarget target, int displayId, String label) {
+        SupportedAliasCatalog.SupportedAliasApp supported = SupportedAliasCatalog.findForTarget(target);
+        if (supported != null) {
+            String aliasClass = aliasForDisplay(supported, displayId);
+            if (aliasClass == null) {
+                showToast("Для этого экрана нет ярлыка");
+                return;
             }
-        }
 
-        if (target == null) {
-            showToast("Сначала выберите приложение");
+            DisplayBinding existing = loadDisplayBinding(displayId);
+            if (existing != null && existing.aliasClass != null
+                    && existing.aliasClass.equals(aliasClass)
+                    && existing.packageName.equals(target.packageName)) {
+                setComponentsEnabled(new String[] { existing.aliasClass },
+                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
+                clearDisplayBinding(displayId);
+                rebuildAppList();
+                showToast("Ярлык удален: " + label);
+                return;
+            }
+
+            if (existing != null && existing.aliasClass != null) {
+                setComponentsEnabled(new String[] { existing.aliasClass },
+                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
+            }
+
+            saveSelectedLauncherTarget(supported, target);
+            setComponentsEnabled(new String[] { aliasClass },
+                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED);
+            saveDisplayBinding(displayId, target, aliasClass);
+            rebuildAppList();
+            showToast("Ярлык создан: " + target.title + " " + displayIndex(displayId));
             return;
         }
 
-        launchTargetOnDisplay(target, displayId, label);
+        // fallback to legacy shortcuts
+        DisplayBinding existing = loadDisplayBinding(displayId);
+        if (existing != null) {
+            if (existing.aliasClass != null) {
+                setComponentsEnabled(new String[] { existing.aliasClass },
+                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
+            }
+            if (existing.packageName.equals(target.packageName)) {
+                clearDisplayBinding(displayId);
+                ShortcutPinReceiver.removeLegacyShortcutForDisplay(
+                        MainActivity.this,
+                        existing.packageName,
+                        existing.activityName,
+                        existing.title,
+                        label,
+                        displayId
+                );
+                rebuildAppList();
+                showToast("Ярлык удален: " + label);
+                return;
+            }
+
+            ShortcutPinReceiver.removeLegacyShortcutForDisplay(
+                    MainActivity.this,
+                    existing.packageName,
+                    existing.activityName,
+                    existing.title,
+                    label,
+                    displayId
+            );
+            clearDisplayBinding(displayId);
+        }
+
+        saveDisplayBinding(displayId, target, null);
+        ShortcutPinReceiver.createShortcutForDisplay(
+                MainActivity.this,
+                target.packageName,
+                target.explicitActivity,
+                target.title,
+                label,
+                displayId
+        );
+        rebuildAppList();
+        showToast("Ярлык: " + ShortcutPinReceiver.getLastStatus(MainActivity.this));
     }
 
     private void launchTargetOnDisplay(AppTarget target, int displayId, String label) {
@@ -419,39 +308,13 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             String message = e.getClass().getSimpleName() + ": " + safeMessage(e.getMessage());
             new AlertDialog.Builder(this)
-                .setTitle("Не удалось открыть на " + label)
+                .setTitle(getString(R.string.launch_failed_title, label))
                 .setMessage(message)
                 .setPositiveButton("Понятно", null)
                 .show();
         }
     }
 
-
-    private void createPinnedShortcuts(View anchor) {
-        if (selectedTarget == null) {
-            showToast("Сначала выберите приложение");
-            return;
-        }
-
-    SupportedAliasCatalog.SupportedAliasApp supported = SupportedAliasCatalog.findForTarget(selectedTarget);
-    if (supported == null) {
-        showToast("Для этого приложения ярлыки пока не поддерживаются");
-        return;
-    }
-
-    saveSelectedLauncherTarget(supported, selectedTarget);
-
-    int enabled = setComponentsEnabled(supported.aliasClassNames,
-            PackageManager.COMPONENT_ENABLED_STATE_ENABLED);
-
-        if (enabled > 0) {
-            showToast("Показаны ярлыки: " + supported.appTitle + ". Лаунчер может обновиться не сразу");
-            updateCarAppStatus();
-            rebuildAppList();
-        } else {
-            showToast("Не удалось показать ярлыки");
-        }
-    }
 
 @Nullable
 private SupportedAliasCatalog.SupportedAliasApp findSupportedAliasApp() {
@@ -461,12 +324,71 @@ private SupportedAliasCatalog.SupportedAliasApp findSupportedAliasApp() {
     return SupportedAliasCatalog.findForTarget(selectedTarget);
 }
 
+@Nullable
+private String aliasForDisplay(SupportedAliasCatalog.SupportedAliasApp supported, int displayId) {
+    if (supported == null || supported.aliasClassNames == null || supported.aliasClassNames.length < 4) {
+        return null;
+    }
+    if (displayId == 1001) {
+        return supported.aliasClassNames[0];
+    }
+    if (displayId == 1002) {
+        return supported.aliasClassNames[1];
+    }
+    if (displayId == 1003) {
+        return supported.aliasClassNames[2];
+    }
+    if (displayId == 3) {
+        return supported.aliasClassNames[3];
+    }
+    return null;
+}
+
+private boolean isAliasEnabled(String className) {
+    if (className == null) {
+        return false;
+    }
+    PackageManager pm = getPackageManager();
+    ComponentName componentName = new ComponentName(this, className);
+    int state = pm.getComponentEnabledSetting(componentName);
+    if (state == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT) {
+        try {
+            return getPackageManager().getActivityInfo(componentName, 0).enabled;
+        } catch (Exception ignored) {
+            return false;
+        }
+    }
+    return state == PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+}
+
+private boolean isAliasTargetMatch(String groupKey, String packageName) {
+    if (groupKey == null || packageName == null) {
+        return false;
+    }
+    String saved = getSharedPreferences("launcher_targets", MODE_PRIVATE)
+            .getString(groupKey + ".package", null);
+    return packageName.equals(saved);
+}
+
+private void clearAliasTarget(String groupKey) {
+    if (groupKey == null) {
+        return;
+    }
+    getSharedPreferences("launcher_targets", MODE_PRIVATE)
+            .edit()
+            .remove(groupKey + ".package")
+            .remove(groupKey + ".activity")
+            .remove(groupKey + ".title")
+            .apply();
+}
+
 
     private void hideAllAliasShortcuts(View anchor) {
         int disabled = setComponentsEnabled(
                 SupportedAliasCatalog.getAllAliasClassNames(),
                 PackageManager.COMPONENT_ENABLED_STATE_DISABLED
         );
+        clearAllDisplayBindings();
         if (disabled > 0) {
             showToast("Ярлыки скрыты. Лаунчер может обновиться не сразу");
             updateCarAppStatus();
@@ -483,158 +405,104 @@ private SupportedAliasCatalog.SupportedAliasApp findSupportedAliasApp() {
             return;
         }
 
-    int disabled = setComponentsEnabled(
-            supported.aliasClassNames,
-            PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-    );
-    getSharedPreferences("launcher_targets", MODE_PRIVATE)
-            .edit()
-            .remove(supported.groupKey + ".package")
-            .remove(supported.groupKey + ".activity")
-            .remove(supported.groupKey + ".title")
-            .apply();
-    if (disabled > 0) {
-        showToast("Ярлыки скрыты: " + supported.appTitle + ". Лаунчер может обновиться не сразу");
-        updateCarAppStatus();
-        rebuildAppList();
-    } else {
-        showToast("Не удалось скрыть ярлыки");
-    }
-}
-
-    private void updateCarAppStatus() {
-        boolean installed = LaunchHelper.isPackageInstalled(this, "ru.dublgis.dgismobile");
-        boolean serviceDeclared = LaunchHelper.isServiceDeclared(this,
-                "ru.dublgis.dgismobile",
-                "ru.dublgis.car.CarService");
-        if (!installed) {
-            carAppStatusText.setText("Статус: 2ГИС не установлен");
-            return;
-        }
-        carAppStatusText.setText(serviceDeclared
-                ? "Статус: CarApp доступен"
-                : "Статус: CarApp не обнаружен");
-    }
-
-    private void triggerTwoGisCarApp() {
-        if (!LaunchHelper.isPackageInstalled(this, "ru.dublgis.dgismobile")) {
-            showToast("2ГИС не установлен");
-            return;
-        }
-        boolean sent = LaunchHelper.startTwoGisCarApp(this);
-        if (sent) {
-            showToast("CarApp trigger отправлен");
-            carAppStatusText.setText("Статус: CarApp trigger отправлен");
+        int disabled = setComponentsEnabled(
+                supported.aliasClassNames,
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+        );
+        getSharedPreferences("launcher_targets", MODE_PRIVATE)
+                .edit()
+                .remove(supported.groupKey + ".package")
+                .remove(supported.groupKey + ".activity")
+                .remove(supported.groupKey + ".title")
+                .apply();
+        if (disabled > 0) {
+            showToast("Ярлыки скрыты: " + supported.appTitle + ". Лаунчер может обновиться не сразу");
+            updateCarAppStatus();
+            rebuildAppList();
         } else {
-            showToast("Не удалось отправить CarApp trigger");
+            showToast("Не удалось скрыть ярлыки");
         }
     }
 
-    private void handleDisplayBinding(int displayId, String label) {
-        if (selectedTarget != null) {
-            saveDisplayBinding(displayId, selectedTarget);
-            refreshDisplayBindings();
-            updateDiagnosticsPanel();
-            showToast("Закреплено для " + label + ": " + selectedTarget.title);
-            return;
-        }
-        DisplayBinding binding = loadDisplayBinding(displayId);
-        if (binding != null) {
-            clearDisplayBinding(displayId);
-            refreshDisplayBindings();
-            updateDiagnosticsPanel();
-            showToast("Закрепление удалено для " + label);
-        } else {
-            showToast("Выберите приложение, чтобы закрепить");
-        }
-    }
-
-    private void refreshDisplayBindings() {
-        for (DisplayTarget target : displayTargets) {
-            updateDisplayCardSubtitle(target.displayId, target.label);
-        }
-    }
-
-    private void confirmResetToMain(AppTarget target) {
-        new AlertDialog.Builder(this)
-                .setTitle("Вернуть на главный экран")
-                .setMessage("Отправить приложение на водительский экран?\n" + target.title)
-                .setPositiveButton("Да", (dialog, which) -> launchTargetOnDisplay(target, 1001, "главном экране"))
-                .setNegativeButton("Отмена", null)
-                .show();
-    }
-
-    private void updateDiagnosticsPanel() {
-        StringBuilder builder = new StringBuilder();
-        DisplayManager displayManager = (DisplayManager) getSystemService(DISPLAY_SERVICE);
-        Display[] displays = displayManager == null ? new Display[0] : displayManager.getDisplays();
-        builder.append("Доступные дисплеи: ");
-        if (displays.length == 0) {
-            builder.append("не найдены");
-        } else {
-            for (int i = 0; i < displays.length; i++) {
-                Display display = displays[i];
-                if (i > 0) {
-                    builder.append(", ");
-                }
-                builder.append("#")
-                        .append(display.getDisplayId())
-                        .append(" (")
-                        .append(display.getName())
-                        .append(")");
-            }
-        }
-
-        builder.append("\nЗакрепления: ");
-        boolean hasBindings = false;
+    private void clearAllDisplayBindings() {
         for (DisplayTarget target : displayTargets) {
             DisplayBinding binding = loadDisplayBinding(target.displayId);
             if (binding == null) {
                 continue;
             }
-            if (!hasBindings) {
-                builder.append("\n");
+            if (binding.aliasClass != null) {
+                setComponentsEnabled(new String[] { binding.aliasClass },
+                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
+            } else {
+                ShortcutPinReceiver.removeLegacyShortcutForDisplay(
+                        MainActivity.this,
+                        binding.packageName,
+                        binding.activityName,
+                        binding.title,
+                        target.label,
+                        target.displayId
+                );
             }
-            hasBindings = true;
-            builder.append("- ")
-                    .append(target.label)
-                    .append(" (Display ")
-                    .append(target.displayId)
-                    .append("): ")
-                    .append(binding.title)
-                    .append("\n");
+            clearDisplayBinding(target.displayId);
         }
-        if (!hasBindings) {
-            builder.append("нет");
-        }
-
-        diagnosticsText.setText(builder.toString().trim());
     }
 
-    private void updateDisplayCardSubtitle(int displayId, String label) {
-        MaterialCardView card = displayCards.get(displayId);
-        if (card == null) {
+    private void updateCarAppStatus() {
+        boolean anyInstalled = LaunchHelper.isPackageInstalled(this, "ru.dublgis.dgismobile")
+                || LaunchHelper.isPackageInstalled(this, "ru.yandex.yandexnavi");
+        if (!anyInstalled) {
+            carAppStatusText.setText(getString(R.string.carapp_status_not_installed));
             return;
         }
-        TextView subtitle = card.findViewById(R.id.launchCardSubtitle);
-        if (subtitle == null) {
+        carAppStatusText.setText(LaunchHelper.hasCarApp(this)
+                ? getString(R.string.carapp_status_available)
+                : getString(R.string.carapp_status_not_found));
+    }
+
+    private void triggerCarApp() {
+        if (!LaunchHelper.isPackageInstalled(this, "ru.dublgis.dgismobile")
+                && !LaunchHelper.isPackageInstalled(this, "ru.yandex.yandexnavi")) {
+            showToast("Навигация не установлена");
             return;
         }
-        String base = "Display " + displayId + " · " + label;
-        DisplayBinding binding = loadDisplayBinding(displayId);
-        if (binding != null) {
-            subtitle.setText(base + " · Закреплено: " + binding.title);
+        boolean sent = LaunchHelper.startCarApp(this);
+        if (sent) {
+            showToast("CarApp trigger отправлен");
+            carAppStatusText.setText(getString(R.string.carapp_trigger_sent));
         } else {
-            subtitle.setText(base);
+            showToast("Не удалось отправить CarApp trigger");
         }
     }
 
-    private void saveDisplayBinding(int displayId, AppTarget target) {
+    @Nullable
+    private String buildBindingSummary(AppTarget target) {
+        if (target == null || target.packageName == null) {
+            return null;
+        }
+        StringBuilder builder = new StringBuilder();
+        for (DisplayTarget displayTarget : displayTargets) {
+            DisplayBinding binding = loadDisplayBinding(displayTarget.displayId);
+            if (binding == null) {
+                continue;
+            }
+            if (!target.packageName.equals(binding.packageName)) {
+                continue;
+            }
+            if (!isEmpty(builder)) {
+                builder.append(", ");
+            }
+            builder.append(displayTarget.label);
+        }
+        return isEmpty(builder) ? null : builder.toString();
+    }
+
+    private void saveDisplayBinding(int displayId, AppTarget target, @Nullable String aliasClass) {
         getSharedPreferences("display_bindings", MODE_PRIVATE)
                 .edit()
                 .putString(displayId + ".package", target.packageName)
                 .putString(displayId + ".activity", target.explicitActivity)
                 .putString(displayId + ".title", target.title)
+                .putString(displayId + ".alias", aliasClass)
                 .apply();
     }
 
@@ -644,6 +512,7 @@ private SupportedAliasCatalog.SupportedAliasApp findSupportedAliasApp() {
                 .remove(displayId + ".package")
                 .remove(displayId + ".activity")
                 .remove(displayId + ".title")
+                .remove(displayId + ".alias")
                 .apply();
     }
 
@@ -658,7 +527,9 @@ private SupportedAliasCatalog.SupportedAliasApp findSupportedAliasApp() {
                 .getString(displayId + ".title", pkg);
         String activity = getSharedPreferences("display_bindings", MODE_PRIVATE)
                 .getString(displayId + ".activity", null);
-        return new DisplayBinding(title, pkg, activity);
+        String aliasClass = getSharedPreferences("display_bindings", MODE_PRIVATE)
+                .getString(displayId + ".alias", null);
+        return new DisplayBinding(title, pkg, activity, aliasClass);
     }
 
 private void saveSelectedLauncherTarget(SupportedAliasCatalog.SupportedAliasApp supported, AppTarget target) {
@@ -686,39 +557,40 @@ private int setComponentsEnabled(String[] classNames, int newState) {
     return changed;
 }
 
-    private boolean isSystemApp(ApplicationInfo applicationInfo) {
-        int flags = applicationInfo.flags;
-        return (flags & ApplicationInfo.FLAG_SYSTEM) != 0
-                || (flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) != 0;
-    }
-
-    private String normalizeActivityName(String packageName, @Nullable String activityName) {
-        if (activityName == null || activityName.trim().isEmpty()) {
-            return packageName;
-        }
-        if (activityName.startsWith(".")) {
-            return packageName + activityName;
-        }
-        return activityName;
-    }
-
-    private String safeLabel(ResolveInfo info, PackageManager pm) {
-        CharSequence label = info.loadLabel(pm);
-        String value = label == null ? null : label.toString().trim();
-        if (value == null || value.isEmpty()) {
-            return info.activityInfo == null ? "Без названия" : info.activityInfo.packageName;
-        }
-        return value;
-    }
 
     private void showToast(String text) {
         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+    }
+
+    private String readVersionName() {
+        try {
+            return getPackageManager()
+                    .getPackageInfo(getPackageName(), 0)
+                    .versionName;
+        } catch (Exception ignored) {
+            return "unknown";
+        }
     }
 
     private String safeMessage(@Nullable String message) {
         return message == null || message.trim().isEmpty() ? "Без подробностей" : message;
     }
 
+    private void openCommunityLink() {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://t.me/GeelyGalaxyClub"));
+            startActivity(intent);
+        } catch (Exception e) {
+            showToast("Не удалось открыть ссылку");
+        }
+    }
+
+    private boolean shouldSwapAppRow() {
+        return getSharedPreferences("ui_prefs", MODE_PRIVATE)
+                .getBoolean("swap_app_row", false);
+    }
+
+    @SuppressWarnings("SpellCheckingInspection")
     private SectionType classifyApp(AppTarget target) {
         String pkg = target.packageName == null ? "" : target.packageName.toLowerCase(Locale.ROOT);
         String title = target.title == null ? "" : target.title.toLowerCase(Locale.ROOT);
@@ -736,12 +608,33 @@ private int setComponentsEnabled(String[] classNames, int newState) {
                 || combined.contains("муз")
                 || combined.contains("video")
                 || combined.contains("youtube")
+                || combined.contains("rutube")
                 || combined.contains("кино")
+                || combined.contains("ivi")
+                || combined.contains("okko")
                 || combined.contains("tv")
-                || combined.contains("радио")) {
+                || combined.contains("радио")
+                || combined.contains("vk")
+                || combined.contains("ximalaya")
+                || combined.contains("kugou")
+                || combined.contains("tencent")) {
             return SectionType.MEDIA;
         }
         return SectionType.OTHER;
+    }
+
+    @SuppressWarnings("SpellCheckingInspection")
+    private static boolean isEmpty(StringBuilder builder) {
+        return builder.length() == 0;
+    }
+
+    private String displayLabel(int displayId) {
+        for (DisplayTarget target : displayTargets) {
+            if (target.displayId == displayId) {
+                return target.label;
+            }
+        }
+        return null;
     }
 
     private enum SectionType {
@@ -749,39 +642,26 @@ private int setComponentsEnabled(String[] classNames, int newState) {
         MEDIA,
         OTHER
     }
-
-    private String sectionLabel(SectionType type) {
-        switch (type) {
-            case NAVIGATION:
-                return "Навигация";
-            case MEDIA:
-                return "Медиа";
-            default:
-                return "Прочее";
-        }
+    private record DisplayBinding(String title, String packageName, @Nullable String activityName,
+                                  @Nullable String aliasClass) {
     }
 
-    private static class DisplayBinding {
-        final String title;
-        final String packageName;
-        @Nullable
-        final String activityName;
-
-        DisplayBinding(String title, String packageName, @Nullable String activityName) {
-            this.title = title;
-            this.packageName = packageName;
-            this.activityName = activityName;
-        }
+    private record DisplayTarget(String label, int displayId) {
     }
 
-
-    private static class DisplayTarget {
-        final String label;
-        final int displayId;
-
-        DisplayTarget(String label, int displayId) {
-            this.label = label;
-            this.displayId = displayId;
+    private String displayIndex(int displayId) {
+        if (displayId == 1001) {
+            return "1";
         }
+        if (displayId == 1002) {
+            return "2";
+        }
+        if (displayId == 1003) {
+            return "3";
+        }
+        if (displayId == 3) {
+            return "4";
+        }
+        return String.valueOf(displayId);
     }
 }

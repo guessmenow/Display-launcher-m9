@@ -3,6 +3,7 @@ plugins {
 }
 
 import java.util.Properties
+import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 
 android {
     namespace = "com.oai.displaylauncher"
@@ -26,7 +27,7 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 3
-        versionName = "2.1-experimental"
+        versionName = "2.1"
 
         vectorDrawables {
             useSupportLibrary = true
@@ -42,8 +43,13 @@ android {
             create("release") {
                 storeFile = file(keystoreValue("M9_KEYSTORE_PATH")!!)
                 storePassword = keystoreValue("M9_KEYSTORE_PASS")
+                storeType = keystoreValue("M9_KEYSTORE_TYPE") ?: "JKS"
                 keyAlias = keystoreValue("M9_KEY_ALIAS")
                 keyPassword = keystoreValue("M9_KEY_ALIAS_PASS") ?: keystoreValue("M9_KEYSTORE_PASS")
+                enableV1Signing = true
+                enableV2Signing = true
+                enableV3Signing = true
+                enableV4Signing = false
             }
         }
     }
@@ -71,6 +77,15 @@ android {
 
     buildFeatures {
         buildConfig = true
+    }
+
+}
+
+android.applicationVariants.all {
+    val vName = versionName ?: "unknown"
+    outputs.all {
+        val output = this as BaseVariantOutputImpl
+        output.outputFileName = "DisplayLauncher_${vName}.apk"
     }
 }
 

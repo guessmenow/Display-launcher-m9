@@ -33,6 +33,16 @@
             android:theme="@style/Theme.DisplayLauncher" />
 
         <activity
+            android:name=".DebugActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DisplayLauncher" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DisplayLauncher" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
@@ -48,7 +58,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_nav_fallback"
-            android:label="navigator 1"
+            android:label="Яндекс Навигатор 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -69,7 +79,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_nav_fallback"
-            android:label="navigator 2"
+            android:label="Яндекс Навигатор 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -90,7 +100,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_nav_fallback"
-            android:label="navigator 3"
+            android:label="Яндекс Навигатор 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -111,7 +121,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_nav_fallback"
-            android:label="navigator 4"
+            android:label="Яндекс Навигатор 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -132,7 +142,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_maps_fallback"
-            android:label="maps 1"
+            android:label="Яндекс Карты 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -152,7 +162,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_maps_fallback"
-            android:label="maps 2"
+            android:label="Яндекс Карты 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -172,7 +182,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_maps_fallback"
-            android:label="maps 3"
+            android:label="Яндекс Карты 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -192,7 +202,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_maps_fallback"
-            android:label="maps 4"
+            android:label="Яндекс Карты 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -212,7 +222,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="youtube 1"
+            android:label="YouTube 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -232,7 +242,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="youtube 2"
+            android:label="YouTube 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -252,7 +262,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="youtube 3"
+            android:label="YouTube 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -272,7 +282,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="youtube 4"
+            android:label="YouTube 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -292,7 +302,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_2gis_alias"
-            android:label="2gis 1"
+            android:label="2GIS 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -312,7 +322,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_2gis_alias"
-            android:label="2gis 2"
+            android:label="2GIS 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -332,7 +342,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_2gis_alias"
-            android:label="2gis 3"
+            android:label="2GIS 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -352,7 +362,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_2gis_alias"
-            android:label="2gis 4"
+            android:label="2GIS 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -372,7 +382,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="mapsme 1"
+            android:label="MAPS.ME 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -392,7 +402,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="mapsme 2"
+            android:label="MAPS.ME 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -412,7 +422,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="mapsme 3"
+            android:label="MAPS.ME 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -432,7 +442,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="mapsme 4"
+            android:label="MAPS.ME 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -452,7 +462,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="waze 1"
+            android:label="Waze 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -472,7 +482,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="waze 2"
+            android:label="Waze 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -492,7 +502,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="waze 3"
+            android:label="Waze 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -512,7 +522,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="waze 4"
+            android:label="Waze 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -532,7 +542,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="organic 1"
+            android:label="Organic Maps 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -552,7 +562,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="organic 2"
+            android:label="Organic Maps 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -572,7 +582,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="organic 3"
+            android:label="Organic Maps 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -592,7 +602,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="organic 4"
+            android:label="Organic Maps 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -612,7 +622,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="cityguide 1"
+            android:label="CityGuide 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -632,7 +642,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="cityguide 2"
+            android:label="CityGuide 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -652,7 +662,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="cityguide 3"
+            android:label="CityGuide 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -672,7 +682,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="cityguide 4"
+            android:label="CityGuide 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -692,7 +702,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="2chargers 1"
+            android:label="2Chargers 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -712,7 +722,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="2chargers 2"
+            android:label="2Chargers 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -732,7 +742,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="2chargers 3"
+            android:label="2Chargers 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -752,7 +762,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="2chargers 4"
+            android:label="2Chargers 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -772,7 +782,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="brixby 1"
+            android:label="Brixby - зарядки 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -792,7 +802,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="brixby 2"
+            android:label="Brixby - зарядки 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -812,7 +822,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="brixby 3"
+            android:label="Brixby - зарядки 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -832,7 +842,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="brixby 4"
+            android:label="Brixby - зарядки 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -852,7 +862,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="malanka 1"
+            android:label="Malanka NEW 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -872,7 +882,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="malanka 2"
+            android:label="Malanka NEW 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -892,7 +902,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="malanka 3"
+            android:label="Malanka NEW 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -912,7 +922,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="malanka 4"
+            android:label="Malanka NEW 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -932,7 +942,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="parking 1"
+            android:label="Парковки 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -952,7 +962,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="parking 2"
+            android:label="Парковки 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -972,7 +982,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="parking 3"
+            android:label="Парковки 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -992,7 +1002,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="parking 4"
+            android:label="Парковки 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1012,7 +1022,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="gparking 1"
+            android:label="Гор. Парковки 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1032,7 +1042,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="gparking 2"
+            android:label="Гор. Парковки 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1052,7 +1062,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="gparking 3"
+            android:label="Гор. Парковки 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1072,7 +1082,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="gparking 4"
+            android:label="Гор. Парковки 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1092,7 +1102,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="contracam 1"
+            android:label="ContraCam 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1112,7 +1122,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="contracam 2"
+            android:label="ContraCam 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1132,7 +1142,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="contracam 3"
+            android:label="ContraCam 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1152,7 +1162,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="contracam 4"
+            android:label="ContraCam 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1172,7 +1182,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="hudspeed 1"
+            android:label="Hud Speed 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1192,7 +1202,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="hudspeed 2"
+            android:label="Hud Speed 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1212,7 +1222,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="hudspeed 3"
+            android:label="Hud Speed 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1232,7 +1242,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="hudspeed 4"
+            android:label="Hud Speed 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1252,7 +1262,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="gpstracker 1"
+            android:label="Real Time GPS Tracker 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1272,7 +1282,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="gpstracker 2"
+            android:label="Real Time GPS Tracker 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1292,7 +1302,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="gpstracker 3"
+            android:label="Real Time GPS Tracker 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1312,7 +1322,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="gpstracker 4"
+            android:label="Real Time GPS Tracker 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1332,7 +1342,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="travel 1"
+            android:label="Яндекс Путешествия 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1352,7 +1362,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="travel 2"
+            android:label="Яндекс Путешествия 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1372,7 +1382,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="travel 3"
+            android:label="Яндекс Путешествия 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1392,7 +1402,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="travel 4"
+            android:label="Яндекс Путешествия 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1412,7 +1422,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="tripadvisor 1"
+            android:label="Tripadvisor 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1432,7 +1442,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="tripadvisor 2"
+            android:label="Tripadvisor 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1452,7 +1462,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="tripadvisor 3"
+            android:label="Tripadvisor 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1472,7 +1482,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="tripadvisor 4"
+            android:label="Tripadvisor 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1492,7 +1502,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="anyapp 1"
+            android:label="AnyApp Keys 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1512,7 +1522,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="anyapp 2"
+            android:label="AnyApp Keys 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1532,7 +1542,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="anyapp 3"
+            android:label="AnyApp Keys 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1552,7 +1562,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="anyapp 4"
+            android:label="AnyApp Keys 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1572,7 +1582,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="trash 1"
+            android:label="Корзина 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1592,7 +1602,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="trash 2"
+            android:label="Корзина 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1612,7 +1622,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="trash 3"
+            android:label="Корзина 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1632,7 +1642,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="trash 4"
+            android:label="Корзина 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1652,7 +1662,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="passenger 1"
+            android:label="Passanger Screen 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1672,7 +1682,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="passenger 2"
+            android:label="Passanger Screen 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1692,7 +1702,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="passenger 3"
+            android:label="Passanger Screen 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1712,7 +1722,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="passenger 4"
+            android:label="Passanger Screen 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1732,7 +1742,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="swiftkey 1"
+            android:label="Microsoft SwiftKey 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1752,7 +1762,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="swiftkey 2"
+            android:label="Microsoft SwiftKey 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1772,7 +1782,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="swiftkey 3"
+            android:label="Microsoft SwiftKey 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1792,7 +1802,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="swiftkey 4"
+            android:label="Microsoft SwiftKey 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1812,7 +1822,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="browser 1"
+            android:label="Yandex Browser 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1832,7 +1842,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="browser 2"
+            android:label="Yandex Browser 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1852,7 +1862,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="browser 3"
+            android:label="Yandex Browser 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1872,7 +1882,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="browser 4"
+            android:label="Yandex Browser 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1892,7 +1902,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="browserlite 1"
+            android:label="Yandex Browser Lite 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1912,7 +1922,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="browserlite 2"
+            android:label="Yandex Browser Lite 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1932,7 +1942,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="browserlite 3"
+            android:label="Yandex Browser Lite 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1952,7 +1962,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="browserlite 4"
+            android:label="Yandex Browser Lite 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1972,7 +1982,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="liswmb 1"
+            android:label="LiSWMB 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -1992,7 +2002,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="liswmb 2"
+            android:label="LiSWMB 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2012,7 +2022,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="liswmb 3"
+            android:label="LiSWMB 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2032,7 +2042,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="liswmb 4"
+            android:label="LiSWMB 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2052,7 +2062,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="tweaks 1"
+            android:label="Lixiang Tweaks 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2072,7 +2082,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="tweaks 2"
+            android:label="Lixiang Tweaks 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2092,7 +2102,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="tweaks 3"
+            android:label="Lixiang Tweaks 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2112,7 +2122,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="tweaks 4"
+            android:label="Lixiang Tweaks 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2132,7 +2142,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carma 1"
+            android:label="CARMA 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2152,7 +2162,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carma 2"
+            android:label="CARMA 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2172,7 +2182,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carma 3"
+            android:label="CARMA 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2192,7 +2202,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carma 4"
+            android:label="CARMA 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2212,7 +2222,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="settings 1"
+            android:label="System Settings 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2232,7 +2242,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="settings 2"
+            android:label="System Settings 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2252,7 +2262,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="settings 3"
+            android:label="System Settings 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2272,7 +2282,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="settings 4"
+            android:label="System Settings 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2292,7 +2302,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="speedtest 1"
+            android:label="SpeedTest 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2312,7 +2322,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="speedtest 2"
+            android:label="SpeedTest 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2332,7 +2342,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="speedtest 3"
+            android:label="SpeedTest 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2352,7 +2362,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="speedtest 4"
+            android:label="SpeedTest 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2372,7 +2382,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="gpstest 1"
+            android:label="GPS Test 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2392,7 +2402,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="gpstest 2"
+            android:label="GPS Test 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2412,7 +2422,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="gpstest 3"
+            android:label="GPS Test 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2432,7 +2442,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="gpstest 4"
+            android:label="GPS Test 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2452,7 +2462,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="launcher 1"
+            android:label="LAAuncher 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2472,7 +2482,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="launcher 2"
+            android:label="LAAuncher 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2492,7 +2502,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="launcher 3"
+            android:label="LAAuncher 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2512,7 +2522,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="launcher 4"
+            android:label="LAAuncher 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2532,7 +2542,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="rearlaunch 1"
+            android:label="LAAuncher REAR 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2552,7 +2562,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="rearlaunch 2"
+            android:label="LAAuncher REAR 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2572,7 +2582,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="rearlaunch 3"
+            android:label="LAAuncher REAR 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2592,7 +2602,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="rearlaunch 4"
+            android:label="LAAuncher REAR 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2692,7 +2702,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="pcradio 1"
+            android:label="PCRadio 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2712,7 +2722,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="pcradio 2"
+            android:label="PCRadio 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2732,7 +2742,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="pcradio 3"
+            android:label="PCRadio 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2752,7 +2762,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="pcradio 4"
+            android:label="PCRadio 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2772,7 +2782,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="spotify 1"
+            android:label="Spotify 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2792,7 +2802,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="spotify 2"
+            android:label="Spotify 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2812,7 +2822,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="spotify 3"
+            android:label="Spotify 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2832,7 +2842,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="spotify 4"
+            android:label="Spotify 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2852,7 +2862,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="applemusic 1"
+            android:label="Apple Music 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2872,7 +2882,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="applemusic 2"
+            android:label="Apple Music 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2892,7 +2902,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="applemusic 3"
+            android:label="Apple Music 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2912,7 +2922,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="applemusic 4"
+            android:label="Apple Music 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2932,7 +2942,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkmusic 1"
+            android:label="VK Music 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2952,7 +2962,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkmusic 2"
+            android:label="VK Music 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2972,7 +2982,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkmusic 3"
+            android:label="VK Music 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -2992,7 +3002,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkmusic 4"
+            android:label="VK Music 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3012,7 +3022,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kinopoisk 1"
+            android:label="Кинопоиск 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3032,7 +3042,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kinopoisk 2"
+            android:label="Кинопоиск 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3052,7 +3062,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kinopoisk 3"
+            android:label="Кинопоиск 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3072,7 +3082,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kinopoisk 4"
+            android:label="Кинопоиск 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3092,7 +3102,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="start 1"
+            android:label="START 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3112,7 +3122,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="start 2"
+            android:label="START 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3132,7 +3142,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="start 3"
+            android:label="START 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3152,7 +3162,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="start 4"
+            android:label="START 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3172,7 +3182,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="rutube 1"
+            android:label="RUTUBE 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3192,7 +3202,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="rutube 2"
+            android:label="RUTUBE 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3212,7 +3222,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="rutube 3"
+            android:label="RUTUBE 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3232,7 +3242,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="rutube 4"
+            android:label="RUTUBE 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3252,7 +3262,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="premier 1"
+            android:label="Premier 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3272,7 +3282,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="premier 2"
+            android:label="Premier 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3292,7 +3302,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="premier 3"
+            android:label="Premier 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3312,7 +3322,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="premier 4"
+            android:label="Premier 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3332,7 +3342,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="okko 1"
+            android:label="Okko 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3352,7 +3362,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="okko 2"
+            android:label="Okko 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3372,7 +3382,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="okko 3"
+            android:label="Okko 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3392,7 +3402,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="okko 4"
+            android:label="Okko 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3412,7 +3422,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ivi 1"
+            android:label="Иви 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3432,7 +3442,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ivi 2"
+            android:label="Иви 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3452,7 +3462,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ivi 3"
+            android:label="Иви 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3472,7 +3482,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ivi 4"
+            android:label="Иви 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3492,7 +3502,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kinopub 1"
+            android:label="Kinopub 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3512,7 +3522,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kinopub 2"
+            android:label="Kinopub 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3532,7 +3542,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kinopub 3"
+            android:label="Kinopub 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3552,7 +3562,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kinopub 4"
+            android:label="Kinopub 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3572,7 +3582,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="lampa 1"
+            android:label="LAMPA 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3592,7 +3602,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="lampa 2"
+            android:label="LAMPA 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3612,7 +3622,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="lampa 3"
+            android:label="LAMPA 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3632,7 +3642,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="lampa 4"
+            android:label="LAMPA 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3652,7 +3662,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ntvplus 1"
+            android:label="NTV PLUS 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3672,7 +3682,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ntvplus 2"
+            android:label="NTV PLUS 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3692,7 +3702,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ntvplus 3"
+            android:label="NTV PLUS 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3712,7 +3722,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ntvplus 4"
+            android:label="NTV PLUS 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3732,7 +3742,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="zona 1"
+            android:label="Zona 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3752,7 +3762,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="zona 2"
+            android:label="Zona 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3772,7 +3782,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="zona 3"
+            android:label="Zona 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3792,7 +3802,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="zona 4"
+            android:label="Zona 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3812,7 +3822,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="deeplex 1"
+            android:label="Deeplex 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3832,7 +3842,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="deeplex 2"
+            android:label="Deeplex 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3852,7 +3862,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="deeplex 3"
+            android:label="Deeplex 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3872,7 +3882,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="deeplex 4"
+            android:label="Deeplex 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3892,7 +3902,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="fmplay 1"
+            android:label="FMPLAY 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3912,7 +3922,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="fmplay 2"
+            android:label="FMPLAY 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3932,7 +3942,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="fmplay 3"
+            android:label="FMPLAY 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3952,7 +3962,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="fmplay 4"
+            android:label="FMPLAY 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3972,7 +3982,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="flex 1"
+            android:label="FLEX 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -3992,7 +4002,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="flex 2"
+            android:label="FLEX 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4012,7 +4022,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="flex 3"
+            android:label="FLEX 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4032,7 +4042,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="flex 4"
+            android:label="FLEX 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4052,7 +4062,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="bookmate 1"
+            android:label="Bookmate 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4072,7 +4082,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="bookmate 2"
+            android:label="Bookmate 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4092,7 +4102,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="bookmate 3"
+            android:label="Bookmate 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4112,7 +4122,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="bookmate 4"
+            android:label="Bookmate 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4132,7 +4142,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="litres 1"
+            android:label="Litres 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4152,7 +4162,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="litres 2"
+            android:label="Litres 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4172,7 +4182,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="litres 3"
+            android:label="Litres 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4192,7 +4202,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="litres 4"
+            android:label="Litres 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4212,7 +4222,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="xplayer 1"
+            android:label="XPlayer 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4232,7 +4242,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="xplayer 2"
+            android:label="XPlayer 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4252,7 +4262,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="xplayer 3"
+            android:label="XPlayer 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4272,7 +4282,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="xplayer 4"
+            android:label="XPlayer 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4292,7 +4302,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vlc 1"
+            android:label="VLC 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4312,7 +4322,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vlc 2"
+            android:label="VLC 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4332,7 +4342,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vlc 3"
+            android:label="VLC 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4352,7 +4362,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vlc 4"
+            android:label="VLC 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4372,7 +4382,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkvideo 1"
+            android:label="VK Video 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4392,7 +4402,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkvideo 2"
+            android:label="VK Video 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4412,7 +4422,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkvideo 3"
+            android:label="VK Video 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4432,7 +4442,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkvideo 4"
+            android:label="VK Video 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4452,7 +4462,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="allplay 1"
+            android:label="Allplay 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4472,7 +4482,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="allplay 2"
+            android:label="Allplay 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4492,7 +4502,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="allplay 3"
+            android:label="Allplay 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4512,7 +4522,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="allplay 4"
+            android:label="Allplay 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4532,7 +4542,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ytkids 1"
+            android:label="YouTube для Детей 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4552,7 +4562,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ytkids 2"
+            android:label="YouTube для Детей 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4572,7 +4582,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ytkids 3"
+            android:label="YouTube для Детей 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4592,7 +4602,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ytkids 4"
+            android:label="YouTube для Детей 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4612,7 +4622,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vokino 1"
+            android:label="VOKINO 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4632,7 +4642,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vokino 2"
+            android:label="VOKINO 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4652,7 +4662,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vokino 3"
+            android:label="VOKINO 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4672,7 +4682,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vokino 4"
+            android:label="VOKINO 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4692,7 +4702,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="smartread 1"
+            android:label="Smart Reading 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4712,7 +4722,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="smartread 2"
+            android:label="Smart Reading 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4732,7 +4742,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="smartread 3"
+            android:label="Smart Reading 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4752,7 +4762,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="smartread 4"
+            android:label="Smart Reading 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4772,7 +4782,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="qobuz 1"
+            android:label="Qobuz Beta 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4792,7 +4802,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="qobuz 2"
+            android:label="Qobuz Beta 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4812,7 +4822,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="qobuz 3"
+            android:label="Qobuz Beta 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4832,7 +4842,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="qobuz 4"
+            android:label="Qobuz Beta 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4852,7 +4862,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="litehdtv 1"
+            android:label="Lite HD TV 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4872,7 +4882,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="litehdtv 2"
+            android:label="Lite HD TV 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4892,7 +4902,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="litehdtv 3"
+            android:label="Lite HD TV 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4912,7 +4922,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="litehdtv 4"
+            android:label="Lite HD TV 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4932,7 +4942,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="filmix 1"
+            android:label="FILMIX UHD 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4952,7 +4962,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="filmix 2"
+            android:label="FILMIX UHD 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4972,7 +4982,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="filmix 3"
+            android:label="FILMIX UHD 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -4992,7 +5002,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="filmix 4"
+            android:label="FILMIX UHD 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5012,7 +5022,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="zvuk 1"
+            android:label="Звук 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5032,7 +5042,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="zvuk 2"
+            android:label="Звук 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5052,7 +5062,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="zvuk 3"
+            android:label="Звук 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5072,7 +5082,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="zvuk 4"
+            android:label="Звук 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5092,7 +5102,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="mult 1"
+            android:label="МУЛЬТ 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5112,7 +5122,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="mult 2"
+            android:label="МУЛЬТ 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5132,7 +5142,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="mult 3"
+            android:label="МУЛЬТ 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5152,7 +5162,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="mult 4"
+            android:label="МУЛЬТ 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5172,7 +5182,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="limehdtv 1"
+            android:label="Лайм HD TV 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5192,7 +5202,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="limehdtv 2"
+            android:label="Лайм HD TV 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5212,7 +5222,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="limehdtv 3"
+            android:label="Лайм HD TV 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5232,7 +5242,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="limehdtv 4"
+            android:label="Лайм HD TV 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5252,7 +5262,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="wink 1"
+            android:label="Wink 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5272,7 +5282,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="wink 2"
+            android:label="Wink 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5292,7 +5302,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="wink 3"
+            android:label="Wink 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5312,7 +5322,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="wink 4"
+            android:label="Wink 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5332,7 +5342,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="deezer 1"
+            android:label="Deezer 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5352,7 +5362,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="deezer 2"
+            android:label="Deezer 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5372,7 +5382,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="deezer 3"
+            android:label="Deezer 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5392,7 +5402,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="deezer 4"
+            android:label="Deezer 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5412,7 +5422,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kion 1"
+            android:label="KION 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5432,7 +5442,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kion 2"
+            android:label="KION 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5452,7 +5462,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kion 3"
+            android:label="KION 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5472,7 +5482,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="kion 4"
+            android:label="KION 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5492,7 +5502,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ottplay 1"
+            android:label="OTT-play FOSS 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5512,7 +5522,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ottplay 2"
+            android:label="OTT-play FOSS 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5532,7 +5542,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ottplay 3"
+            android:label="OTT-play FOSS 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5552,7 +5562,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ottplay 4"
+            android:label="OTT-play FOSS 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5572,7 +5582,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="torrserve 1"
+            android:label="TorrServe 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5592,7 +5602,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="torrserve 2"
+            android:label="TorrServe 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5612,7 +5622,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="torrserve 3"
+            android:label="TorrServe 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5632,7 +5642,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="torrserve 4"
+            android:label="TorrServe 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5652,7 +5662,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="match 1"
+            android:label="Все на МАТЧ! 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5672,7 +5682,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="match 2"
+            android:label="Все на МАТЧ! 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5692,7 +5702,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="match 3"
+            android:label="Все на МАТЧ! 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5712,7 +5722,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="match 4"
+            android:label="Все на МАТЧ! 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5732,7 +5742,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="radio 1"
+            android:label="Яндекс Радио 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5752,7 +5762,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="radio 2"
+            android:label="Яндекс Радио 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5772,7 +5782,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="radio 3"
+            android:label="Яндекс Радио 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5792,7 +5802,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="radio 4"
+            android:label="Яндекс Радио 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5812,7 +5822,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="gyawun 1"
+            android:label="Gyawun Music 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5832,7 +5842,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="gyawun 2"
+            android:label="Gyawun Music 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5852,7 +5862,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="gyawun 3"
+            android:label="Gyawun Music 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5872,7 +5882,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="gyawun 4"
+            android:label="Gyawun Music 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5892,7 +5902,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="radiorec 1"
+            android:label="RadioRecord 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5912,7 +5922,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="radiorec 2"
+            android:label="RadioRecord 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5932,7 +5942,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="radiorec 3"
+            android:label="RadioRecord 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5952,7 +5962,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="radiorec 4"
+            android:label="RadioRecord 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5972,7 +5982,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkvideoaa 1"
+            android:label="VK Видео AA 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -5992,7 +6002,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkvideoaa 2"
+            android:label="VK Видео AA 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6012,7 +6022,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkvideoaa 3"
+            android:label="VK Видео AA 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6032,7 +6042,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="vkvideoaa 4"
+            android:label="VK Видео AA 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6052,7 +6062,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="lazymedia 1"
+            android:label="LazyMedia Deluxe 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6072,7 +6082,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="lazymedia 2"
+            android:label="LazyMedia Deluxe 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6092,7 +6102,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="lazymedia 3"
+            android:label="LazyMedia Deluxe 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6112,7 +6122,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="lazymedia 4"
+            android:label="LazyMedia Deluxe 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6132,7 +6142,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="twitch 1"
+            android:label="Twitch 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6152,7 +6162,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="twitch 2"
+            android:label="Twitch 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6172,7 +6182,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="twitch 3"
+            android:label="Twitch 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6192,7 +6202,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="twitch 4"
+            android:label="Twitch 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6212,7 +6222,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="itv 1"
+            android:label="iTV 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6232,7 +6242,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="itv 2"
+            android:label="iTV 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6252,7 +6262,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="itv 3"
+            android:label="iTV 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6272,7 +6282,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="itv 4"
+            android:label="iTV 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6292,7 +6302,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ottplayer 1"
+            android:label="OttPlayer 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6312,7 +6322,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ottplayer 2"
+            android:label="OttPlayer 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6332,7 +6342,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ottplayer 3"
+            android:label="OttPlayer 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6352,7 +6362,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="ottplayer 4"
+            android:label="OttPlayer 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6372,7 +6382,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="getstv 1"
+            android:label="GetsTV 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6392,7 +6402,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="getstv 2"
+            android:label="GetsTV 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6412,7 +6422,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="getstv 3"
+            android:label="GetsTV 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6432,7 +6442,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="getstv 4"
+            android:label="GetsTV 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6452,7 +6462,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="audials 1"
+            android:label="Audials Play 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6472,7 +6482,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="audials 2"
+            android:label="Audials Play 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6492,7 +6502,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="audials 3"
+            android:label="Audials Play 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6512,7 +6522,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="audials 4"
+            android:label="Audials Play 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6532,7 +6542,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="amazonmusic 1"
+            android:label="Amazon Music 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6552,7 +6562,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="amazonmusic 2"
+            android:label="Amazon Music 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6572,7 +6582,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="amazonmusic 3"
+            android:label="Amazon Music 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6592,7 +6602,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="amazonmusic 4"
+            android:label="Amazon Music 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6612,7 +6622,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="soundcloud 1"
+            android:label="SoundCloud 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6632,7 +6642,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="soundcloud 2"
+            android:label="SoundCloud 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6652,7 +6662,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="soundcloud 3"
+            android:label="SoundCloud 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6672,7 +6682,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="soundcloud 4"
+            android:label="SoundCloud 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6692,7 +6702,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="metrolist 1"
+            android:label="Metrolist 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6712,7 +6722,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="metrolist 2"
+            android:label="Metrolist 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6732,7 +6742,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="metrolist 3"
+            android:label="Metrolist 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6752,7 +6762,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_youtube_alias"
-            android:label="metrolist 4"
+            android:label="Metrolist 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6772,7 +6782,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="angrybirds 1"
+            android:label="Angry Birds 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6792,7 +6802,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="angrybirds 2"
+            android:label="Angry Birds 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6812,7 +6822,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="angrybirds 3"
+            android:label="Angry Birds 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6832,7 +6842,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="angrybirds 4"
+            android:label="Angry Birds 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6852,7 +6862,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="chess 1"
+            android:label="Chess 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6872,7 +6882,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="chess 2"
+            android:label="Chess 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6892,7 +6902,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="chess 3"
+            android:label="Chess 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6912,7 +6922,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="chess 4"
+            android:label="Chess 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6932,7 +6942,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="livegames 1"
+            android:label="LiveGames 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6952,7 +6962,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="livegames 2"
+            android:label="LiveGames 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6972,7 +6982,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="livegames 3"
+            android:label="LiveGames 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -6992,7 +7002,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="livegames 4"
+            android:label="LiveGames 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7012,7 +7022,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="telegram 1"
+            android:label="Telegram 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7032,7 +7042,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="telegram 2"
+            android:label="Telegram 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7052,7 +7062,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="telegram 3"
+            android:label="Telegram 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7072,7 +7082,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="telegram 4"
+            android:label="Telegram 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7092,7 +7102,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="messages 1"
+            android:label="Messages 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7112,7 +7122,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="messages 2"
+            android:label="Messages 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7132,7 +7142,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="messages 3"
+            android:label="Messages 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7152,7 +7162,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="messages 4"
+            android:label="Messages 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7172,7 +7182,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="ymail 1"
+            android:label="Yandex Mail 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7192,7 +7202,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="ymail 2"
+            android:label="Yandex Mail 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7212,7 +7222,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="ymail 3"
+            android:label="Yandex Mail 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7232,7 +7242,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="ymail 4"
+            android:label="Yandex Mail 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7252,7 +7262,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="vkaa 1"
+            android:label="VK AA 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7272,7 +7282,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="vkaa 2"
+            android:label="VK AA 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7292,7 +7302,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="vkaa 3"
+            android:label="VK AA 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7312,7 +7322,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_communication"
-            android:label="vkaa 4"
+            android:label="VK AA 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7332,7 +7342,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="smarthome 1"
+            android:label="Умный Дом 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7352,7 +7362,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="smarthome 2"
+            android:label="Умный Дом 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7372,7 +7382,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="smarthome 3"
+            android:label="Умный Дом 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7392,7 +7402,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="smarthome 4"
+            android:label="Умный Дом 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7412,7 +7422,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="homeassist 1"
+            android:label="Home Assistant 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7432,7 +7442,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="homeassist 2"
+            android:label="Home Assistant 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7452,7 +7462,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="homeassist 3"
+            android:label="Home Assistant 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7472,7 +7482,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="homeassist 4"
+            android:label="Home Assistant 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7492,7 +7502,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="eweather 1"
+            android:label="eWeather HD 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7512,7 +7522,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="eweather 2"
+            android:label="eWeather HD 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7532,7 +7542,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="eweather 3"
+            android:label="eWeather HD 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7552,7 +7562,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="eweather 4"
+            android:label="eWeather HD 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7572,7 +7582,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="weather 1"
+            android:label="Y.Weather 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7592,7 +7602,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="weather 2"
+            android:label="Y.Weather 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7612,7 +7622,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="weather 3"
+            android:label="Y.Weather 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7632,7 +7642,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="weather 4"
+            android:label="Y.Weather 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7652,7 +7662,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="vegatel 1"
+            android:label="VEGATEL 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7672,7 +7682,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="vegatel 2"
+            android:label="VEGATEL 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7692,7 +7702,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="vegatel 3"
+            android:label="VEGATEL 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7712,7 +7722,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="vegatel 4"
+            android:label="VEGATEL 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7732,7 +7742,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="palgate 1"
+            android:label="PalGate 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7752,7 +7762,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="palgate 2"
+            android:label="PalGate 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7772,7 +7782,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="palgate 3"
+            android:label="PalGate 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7792,7 +7802,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="palgate 4"
+            android:label="PalGate 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7812,7 +7822,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="rustore 1"
+            android:label="RuStore 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7832,7 +7842,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="rustore 2"
+            android:label="RuStore 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7852,7 +7862,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="rustore 3"
+            android:label="RuStore 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7872,7 +7882,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="rustore 4"
+            android:label="RuStore 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7892,7 +7902,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="intelpark 1"
+            android:label="Интелпарк 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7912,7 +7922,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="intelpark 2"
+            android:label="Интелпарк 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7932,7 +7942,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="intelpark 3"
+            android:label="Интелпарк 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7952,7 +7962,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="intelpark 4"
+            android:label="Интелпарк 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7972,7 +7982,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="pikdom 1"
+            android:label="ПИК Домофон 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -7992,7 +8002,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="pikdom 2"
+            android:label="ПИК Домофон 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8012,7 +8022,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="pikdom 3"
+            android:label="ПИК Домофон 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8032,7 +8042,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="pikdom 4"
+            android:label="ПИК Домофон 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8052,7 +8062,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="outline 1"
+            android:label="Outline 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8072,7 +8082,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="outline 2"
+            android:label="Outline 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8092,7 +8102,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="outline 3"
+            android:label="Outline 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8112,7 +8122,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="outline 4"
+            android:label="Outline 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8132,7 +8142,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="amnezia 1"
+            android:label="Amnezia 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8152,7 +8162,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="amnezia 2"
+            android:label="Amnezia 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8172,7 +8182,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="amnezia 3"
+            android:label="Amnezia 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8192,7 +8202,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="amnezia 4"
+            android:label="Amnezia 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8212,7 +8222,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="byebyedpi 1"
+            android:label="ByeByeDPI 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8232,7 +8242,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="byebyedpi 2"
+            android:label="ByeByeDPI 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8252,7 +8262,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="byebyedpi 3"
+            android:label="ByeByeDPI 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8272,7 +8282,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="byebyedpi 4"
+            android:label="ByeByeDPI 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8292,7 +8302,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="v2rayng 1"
+            android:label="v2rayNG 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8312,7 +8322,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="v2rayng 2"
+            android:label="v2rayNG 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8332,7 +8342,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="v2rayng 3"
+            android:label="v2rayNG 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8352,7 +8362,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="v2rayng 4"
+            android:label="v2rayNG 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8372,7 +8382,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="safeshell 1"
+            android:label="SafeShell 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8392,7 +8402,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="safeshell 2"
+            android:label="SafeShell 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8412,7 +8422,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="safeshell 3"
+            android:label="SafeShell 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8432,7 +8442,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="safeshell 4"
+            android:label="SafeShell 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8452,7 +8462,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="amneziawg 1"
+            android:label="AmneziaWG 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8472,7 +8482,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="amneziawg 2"
+            android:label="AmneziaWG 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8492,7 +8502,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="amneziawg 3"
+            android:label="AmneziaWG 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8512,7 +8522,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="amneziawg 4"
+            android:label="AmneziaWG 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8532,7 +8542,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="vanya 1"
+            android:label="Дядя Ваня 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8552,7 +8562,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="vanya 2"
+            android:label="Дядя Ваня 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8572,7 +8582,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="vanya 3"
+            android:label="Дядя Ваня 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8592,7 +8602,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="vanya 4"
+            android:label="Дядя Ваня 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8612,7 +8622,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="hitvpn 1"
+            android:label="HitVPN 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8632,7 +8642,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="hitvpn 2"
+            android:label="HitVPN 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8652,7 +8662,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="hitvpn 3"
+            android:label="HitVPN 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8672,7 +8682,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="hitvpn 4"
+            android:label="HitVPN 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8693,7 +8703,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="navitel 1"
+            android:label="Навител Навигатор 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8713,7 +8723,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="navitel 2"
+            android:label="Навител Навигатор 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8733,7 +8743,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="navitel 3"
+            android:label="Навител Навигатор 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8753,7 +8763,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="navitel 4"
+            android:label="Навител Навигатор 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8773,7 +8783,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carscan 1"
+            android:label="Car Scanner ELM OBD2 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8793,7 +8803,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carscan 2"
+            android:label="Car Scanner ELM OBD2 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8813,7 +8823,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carscan 3"
+            android:label="Car Scanner ELM OBD2 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8833,7 +8843,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carscan 4"
+            android:label="Car Scanner ELM OBD2 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8853,7 +8863,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="torquep 1"
+            android:label="Torque Pro 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8873,7 +8883,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="torquep 2"
+            android:label="Torque Pro 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8893,7 +8903,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="torquep 3"
+            android:label="Torque Pro 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8913,7 +8923,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="torquep 4"
+            android:label="Torque Pro 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8933,7 +8943,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="torquel 1"
+            android:label="Torque Lite 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8953,7 +8963,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="torquel 2"
+            android:label="Torque Lite 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8973,7 +8983,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="torquel 3"
+            android:label="Torque Lite 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -8993,7 +9003,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="torquel 4"
+            android:label="Torque Lite 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9013,7 +9023,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="aimp 1"
+            android:label="AIMP 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9033,7 +9043,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="aimp 2"
+            android:label="AIMP 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9053,7 +9063,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="aimp 3"
+            android:label="AIMP 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9073,7 +9083,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="aimp 4"
+            android:label="AIMP 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9093,7 +9103,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="mxplay 1"
+            android:label="MX Player 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9113,7 +9123,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="mxplay 2"
+            android:label="MX Player 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9133,7 +9143,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="mxplay 3"
+            android:label="MX Player 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9153,7 +9163,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_games"
-            android:label="mxplay 4"
+            android:label="MX Player 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9173,7 +9183,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="cwg 1"
+            android:label="CarWebGuru 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9193,7 +9203,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="cwg 2"
+            android:label="CarWebGuru 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9213,7 +9223,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="cwg 3"
+            android:label="CarWebGuru 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9233,7 +9243,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="cwg 4"
+            android:label="CarWebGuru 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9253,7 +9263,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="claunch 1"
+            android:label="Car Launcher 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9273,7 +9283,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="claunch 2"
+            android:label="Car Launcher 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9293,7 +9303,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="claunch 3"
+            android:label="Car Launcher 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9313,7 +9323,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="claunch 4"
+            android:label="Car Launcher 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9333,7 +9343,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="agama 1"
+            android:label="AGAMA Car Launcher 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9353,7 +9363,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="agama 2"
+            android:label="AGAMA Car Launcher 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9373,7 +9383,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="agama 3"
+            android:label="AGAMA Car Launcher 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9393,7 +9403,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="agama 4"
+            android:label="AGAMA Car Launcher 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9413,7 +9423,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="hur 1"
+            android:label="Headunit Reloaded 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9433,7 +9443,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="hur 2"
+            android:label="Headunit Reloaded 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9453,7 +9463,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="hur 3"
+            android:label="Headunit Reloaded 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9473,7 +9483,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="hur 4"
+            android:label="Headunit Reloaded 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9493,7 +9503,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="anti 1"
+            android:label="GPS АнтиРадар 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9513,7 +9523,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="anti 2"
+            android:label="GPS АнтиРадар 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9533,7 +9543,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="anti 3"
+            android:label="GPS АнтиРадар 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9553,7 +9563,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_navigation"
-            android:label="anti 4"
+            android:label="GPS АнтиРадар 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9573,7 +9583,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="fcc 1"
+            android:label="FCC Car Launcher 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9593,7 +9603,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="fcc 2"
+            android:label="FCC Car Launcher 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9613,7 +9623,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="fcc 3"
+            android:label="FCC Car Launcher 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9633,7 +9643,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="fcc 4"
+            android:label="FCC Car Launcher 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9653,7 +9663,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="crony 1"
+            android:label="Crony Auto 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9673,7 +9683,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="crony 2"
+            android:label="Crony Auto 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9693,7 +9703,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="crony 3"
+            android:label="Crony Auto 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9713,7 +9723,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="crony 4"
+            android:label="Crony Auto 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9733,7 +9743,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="navradio 1"
+            android:label="NavRadio+ 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9753,7 +9763,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="navradio 2"
+            android:label="NavRadio+ 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9773,7 +9783,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="navradio 3"
+            android:label="NavRadio+ 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9793,7 +9803,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="navradio 4"
+            android:label="NavRadio+ 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9813,7 +9823,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carcar 1"
+            android:label="CarCar Installer 1"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9833,7 +9843,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carcar 2"
+            android:label="CarCar Installer 2"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9853,7 +9863,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carcar 3"
+            android:label="CarCar Installer 3"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">
@@ -9873,7 +9883,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:icon="@drawable/ic_alias_generic_utility"
-            android:label="carcar 4"
+            android:label="CarCar Installer 4"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/Theme.DisplayLauncher">

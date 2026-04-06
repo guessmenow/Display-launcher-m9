@@ -22,7 +22,7 @@
             android:layout_height="28dp"
             android:layout_gravity="center"
             android:contentDescription="@null"
-            android:src="@drawable/ic_view_agenda_24"
+            android:src="@drawable/ic_expand_24"
             app:tint="@android:color/white" />
     </FrameLayout>
 
